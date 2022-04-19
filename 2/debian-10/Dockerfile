@@ -21,6 +21,10 @@ RUN ln -s /opt/bitnami/scripts/kafka/run.sh /run.sh
 
 COPY rootfs /
 RUN /opt/bitnami/scripts/kafka/postunpack.sh
+
+# add jmx exporter by mql
+COPY jmx_exporter /opt/bitnami/kafka
+
 ENV BITNAMI_APP_NAME="kafka" \
     BITNAMI_IMAGE_VERSION="2.4.1-debian-10-r58" \
     NAMI_PREFIX="/.nami" \
