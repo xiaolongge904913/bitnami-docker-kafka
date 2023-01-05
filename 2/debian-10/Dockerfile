@@ -25,6 +25,9 @@ RUN /opt/bitnami/scripts/kafka/postunpack.sh
 # add jmx exporter by mql
 COPY jmx_exporter /opt/bitnami/kafka
 
+# add log4j config file by mql
+ADD log4j/log4j.properties /opt/bitnami/kafka/config
+
 ENV BITNAMI_APP_NAME="kafka" \
     BITNAMI_IMAGE_VERSION="2.5.0-debian-10-r112" \
     PATH="/opt/bitnami/java/bin:/opt/bitnami/common/bin:/opt/bitnami/kafka/bin:$PATH"
