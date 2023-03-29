@@ -34,6 +34,6 @@ ENV BITNAMI_APP_NAME="kafka" \
 
 EXPOSE 9092
 
-USER 1001
+USER 2001
 ENTRYPOINT [ "/opt/bitnami/scripts/kafka/entrypoint.sh" ]
 CMD [ "/opt/bitnami/scripts/kafka/run.sh" ]
